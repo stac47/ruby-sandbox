@@ -12,9 +12,10 @@ while not found
   print "Please enter a number: "
   input = gets
   n = Integer(input.chomp)
-  if n <secret
+  case n <=> secret
+  when -1
     puts "Too low"
-  elsif n > secret
+  when 1
     puts "Too high"
   else
     puts "Bravo"
