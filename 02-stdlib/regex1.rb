@@ -67,5 +67,11 @@ class TestRegexp < Minitest::Unit::TestCase
     assert_equal "123", data[:cvv]
   end
 
+  def test_split_string
+    phone = "09/57/52/58/52"
+    digits = phone.split(/\s*\/\s*/)
+    assert_equal 5, digits.size
+  end
+
 end
 
