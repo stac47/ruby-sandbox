@@ -7,20 +7,23 @@
 #
 # Testing self keyword.
 
+# self = main
+puts "From start: #{self.inspect}"
+
 class A
 
   # self = A
-  puts "From start #{self}"
+  puts "From class A start definition: #{self}"
 
   class << self
     # self = a class instance
     # #<Class:A>
-    puts "From Eigenclass #{self}"
+    puts "From Eigenclass: #{self}"
   end
 
   def initialize
     # self = an instance of object A
-    puts "From initialize #{self}"
+    puts "From initialize: #{self}"
   end
 end
 
