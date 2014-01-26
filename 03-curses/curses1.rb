@@ -8,6 +8,7 @@
 # Testing the ruby curse binding.
 
 require 'curses'
+include Curses
 
 def display_message(message)
   width = message.length + 6
@@ -23,7 +24,7 @@ def display_message(message)
 end
 
 Curses.init_screen
-Curses.clear
+
 begin
   Curses.crmode
   Curses.setpos((lines - 5) / 2, (cols - 10) / 2)
